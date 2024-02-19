@@ -1,0 +1,12 @@
+package com.codigo.msbustamantepalomino.infrastructure.repository;
+
+import com.codigo.msbustamantepalomino.infrastructure.entity.TipoPersonaEntity;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.query.Param;
+
+import java.util.List;
+
+public interface TipoPersonaRepository extends JpaRepository<TipoPersonaEntity,Long>{
+    TipoPersonaEntity findByCodTipoAndEstado(@Param("codTipo") String codTipo,Integer estado);
+
+ }
